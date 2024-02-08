@@ -15,6 +15,93 @@
             <li> <a href="themes.html"> Themes </a></li>
         </ul>
     </nav>
-    <h1>Themes</h1>
+
+    <div class = "themesImage">
+        <figure>
+            <img src = "images/beowulfQueen.jpeg" alt = "Bewoulf in Heorot drinking with the Queen.">
+            <figcaption>https://sites.up.edu/earlybritishsurvey/beowulf-as-a-hero/</figcaption>
+        </figure>
+    </div>
+    
+    
+    <div class = "themes-container">
+        <h2>Key Themes of Beowulf</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Theme</th>
+                    <th>Description</th>
+                    <th>Examples</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Heroism and Valor</td>
+                    <td>The valor and heroism of individuals, often demonstrated through battles.</td>
+                    <td>Beowulf's battles against Grendel, Grendel's Mother, and the Dragon.</td>
+                </tr>
+                <tr>
+                    <td>Good vs. Evil</td>
+                    <td>The perpetual conflict between opposing forces of good and evil.</td>
+                    <td>Beowulf's fight against the malevolent creatures threatening the peace.</td>
+                </tr>
+                <tr>
+                    <td>Loyalty and Allegiance</td>
+                    <td>The importance of loyalty and allegiance as societal pillars.</td>
+                    <td>Beowulf's loyalty to King Hrothgar and the people of Heorot.</td>
+                </tr>
+                <tr>
+                    <td>Fate and Providence</td>
+                    <td>The role of fate and divine providence in shaping human destinies.</td>
+                    <td>References to fate's inevitability and divine intervention throughout the epic.</td>
+                </tr>
+                <tr>
+                    <td>Reputation and Honor</td>
+                    <td>The significance of one's reputation and the pursuit of honor.</td>
+                    <td>Beowulf's desire to be remembered as a great hero.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <hr>
+
+    <div class = "theme-quotes">
+        <h2>Select a theme to view quotes relating to that theme</h2>
+
+        <label for="themeQuotes">Select a Theme:</label>
+        <select id="themeQuotes">
+            <option value="">--Select a Theme--</option>
+            <option value="heroism">Heroism and Valor</option>
+            <option value="goodEvil">Good vs. Evil</option>
+            <option value="loyalty">Loyalty and Allegiance</option>
+            <option value="fate">Fate and Providence</option>
+            <option value="reputation">Reputation and Honor</option>
+        </select>
+
+    <div id="themeQuote"></div>
+
+    </div>
+
+    <script>
+        document.getElementById('themeQuotes').addEventListener('change', function() {
+            const theme = this.value;
+            const themeQuoteDiv = document.getElementById('themeQuote');
+    
+            const quotes = {
+                heroism: "‘...he was a warrior all his life, yet joyous and generous.’",
+                goodEvil: "‘Light and life together, to the lords of the Shieldings, he gave, the house and the helmet high.’",
+                loyalty: "‘...for loyal was he.’",
+                fate: "‘Fate often saves an undoomed man when his courage is good.’",
+                reputation: "‘He who can earn it should fight for the glory of his name; fame after death is the noblest of goals.’"
+            };
+
+            themeQuoteDiv.innerHTML = quotes[theme] ? `<p>${quotes[theme]}</p>` : '<p>Select a theme to see a related quote.</p>';
+        });
+
+    </script>
+
+
 </body>
 </html>

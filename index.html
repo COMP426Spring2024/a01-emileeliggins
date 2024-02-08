@@ -23,11 +23,13 @@
     <div class = "text">
         <h1>The Greatest Work of Old English Literature, The Epic of Beowulf</h1>
 
-        <img src = "images/beowulfManuscript.jpeg" alt = "The surviving Beowulf manuscript written in old english. 
-        Appears burned because the manuscript was found salvaged from a house fire.">
-
+        <figure>
+            <img src = "images/beowulfManuscript.jpeg" alt = "The surviving Beowulf manuscript written in old english. 
+                Appears burned because the manuscript was found salvaged from a house fire.">
         <figcaption>Fig.1 Beowulf Manuscript, London, British Library: The opening lines of Beowulf written in Old English. 
             Burn marks appear on the manuscript because it was salavaged from a house fire.</figcaption>
+        </figure>
+        
 
 
         <h3>Origins</h3>
@@ -37,6 +39,7 @@
             which was a very common feature of Old English poetry. The exact date of composition is widely debated, but it is suspected to have
             been written around the year 1000AD. Within the poem we find conflicting Christian and Pagan elements which interestingly relates to
             the orgins and formation of England. Here's what happened:
+        </p>
             <ol>
                 <li>Modern day England was occupied by Rome</li>
                 <li>Rome was attacked, so Roman soldiers left England to help defend their homeland. This left England without any order or infrastructure which made
@@ -45,7 +48,7 @@
                 </li>
                 <li>With time, England began to convert to Christianity, but it is highly likely that some Pagan Germanic beliefs still lingered amongst the people.</li>
             </ol>
-
+        <p>
             Beowulf offers a unique window into the cultural and historical contexts of early medieval Europe and preserves the oral traditions of the Germanic people. 
         </p>
 
@@ -62,6 +65,78 @@
                   the epic serves as a timeless reflection on the human condition, emphasizing the value of achieving honor and respect,
                    which, unlike earthly possessions, survive the hero's mortal demise.
         </p>
+
+        <h3>Old English to Modern English</h3>
+        <hr>
+        <p>
+            The English language has changed a lot over the years. Click on one of the following Old English Phrases from
+            Beowulf to see their modern English translation.
+        </p>
+
+
+        <select id = "oldEnglishSelections" name = "oldEnglish">
+            <option value= "">Select a sentence...</option>
+            <option value = "option1">Hwæt! Wē Gār-Dena in gēardagum þēodcyninga þrym gefrūnon...</option>
+            <option value = "option2">Wē synt Higelāces bēodgenēatas; Bēowulf is mīn nama.</option>
+            <option value = "option3">Gē þāt mōton on mōde gecnāwan þæt ic on wēalfeallum wīgendra hlēo, nihtes hwīlum næfre gefrægn hæleða ǣnigne þryðlīcran þeon</option>
+            <option value = "option4">Ic þāra frætwa frēan ealles þanc secge, þeoden Hrōðgār, þēah þe ic hēr swā lange...</option>
+        </select>
+
+        <div id = "translation"></div>
+
+        <script>
+            document.getElementById('oldEnglishSelections').addEventListener('change', function(){
+                var translations = {
+                    'option1': "Listen! We have heard of the might of the kings in the days of yore of the Spear-Danes... Significance: This line serves as the epic's opening, calling attention to the tale of heroism that follows.",
+                    'option2': "We are retainers from Hygelac's band; Beowulf is my name. Significance: Here, Beowulf introduces himself to King Hrothgar, offering his help to defeat Grendel.",
+                    'option3' : "Often, for undaunted courage, fate spares the man it has not already marked. Significance: Beowulf speaks of fate and courage, themes central to the epic.",
+                    'option4' : "I say thanks to the Lord of All, to the king, Hrothgar, for these treasures... Significance: As Beowulf reflects on his life and prepares for his final battle, he expresses gratitude."
+                };
+
+                var selectedValue = this.value
+                var translationText = translations[selectedValue] || "Please select an Old English translation.";
+
+                document.getElementById('translation').textContent = translationText;
+            });
+        </script>
+
+        <h3>Major Characters in Beowulf</h3>
+        <hr>
+        <table>
+            <tr>
+                <th>Character</th>
+                <th>Role</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Beowulf</td>
+                <td>Hero of the Geats</td>
+                <td>A warrior who fights Grendel, Grendel's mother, and a dragon; exhibits the ideals of Anglo-Saxon heroism.</td>
+            </tr>
+            <tr>
+                <td>Hrothgar</td>
+                <td>King of the Danes</td>
+                <td>Ruler of Heorot, he seeks Beowulf's help to defeat Grendel.</td>
+            </tr>
+            <tr>
+                <td>Grendel</td>
+                <td>Monster</td>
+                <td>A beast terrorizing Heorot, eventually defeated by Beowulf.</td>
+            </tr>
+            <tr>
+                <td>Grendel's Mother</td>
+                <td>Revengeful Monster</td>
+                <td>Seeks vengeance for the death of her son, fights Beowulf in her underwater lair.</td>
+            </tr>
+            <tr>
+                <td>The Dragon</td>
+                <td>Antagonist</td>
+                <td>A powerful dragon that fights Beowulf in his final battle.</td>
+                </tr>
+        </table>
+
+        <p>Note: The citation for all quotes from Beowulf and story ideas is as follows:</p>
+        <p>Heaney, Seamus, translator. Beowulf: A New Verse Translation. W.W. Norton & Company, 2000.</p>
 
     </div>
 </body>

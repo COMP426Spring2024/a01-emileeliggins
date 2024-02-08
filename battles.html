@@ -15,11 +15,15 @@
             <li> <a href="themes.html"> Themes </a></li>
         </ul>
     </nav>
+
+
     <div class = "b1">
         <div class = "grendel">
             <h2>Beowulf and Grendel</h2>
-            <img src = "images/grendelBattle.jpeg" alt = "Depiction of Beowulf ripping the arm off of Grendel in Heorot Hall.">
-            <figcaption>https://sites.up.edu/earlybritishsurvey/beowulfs-game-battle/</figcaption>
+            <figure>
+                <img src = "images/grendelBattle.jpeg" alt = "Depiction of Beowulf ripping the arm off of Grendel in Heorot Hall.">
+                <figcaption>https://sites.up.edu/earlybritishsurvey/beowulfs-game-battle/</figcaption>
+            </figure>
         </div>
         <div class = "b1Text">
             <p>Grendel, a monster who has been terrorizing the Danes at their great mead-hall Heorot, 
@@ -31,12 +35,16 @@
         </div>
     </div>
 
+    <hr>
+
     <div class = "b2">
         <div class = "grendelsMother">
             <h2>Beowulf and Grendel's Mother</h2>
-            <img src = "images/gMotherBattle.webp" alt = "Depiction of Beowulf preparing to kill 
-            Grendel's mother with the sword of the giants that he claims he found by divine intervention.">
-            <figcaption>https://classicalteachersjournal.com/beowulf-4-fighting-grendels-mother/</figcaption>
+            <figure>
+                <img src = "images/gMotherBattle.webp" alt = "Depiction of Beowulf preparing to kill 
+                Grendel's mother with the sword of the giants that he claims he found by divine intervention.">
+                <figcaption>https://classicalteachersjournal.com/beowulf-4-fighting-grendels-mother/</figcaption>
+            </figure>
         </div>
         <div class = "b2Text">
             <p>Seeking revenge for her son's death, Grendel's mother attacks Heorot. 
@@ -47,11 +55,15 @@
         </div>
     </div>
 
+    <hr>
+
     <div class = "b3">
         <div class = "theDragon">
             <h2>Beowulf and The Dragon</h2>
-            <img src = "images/fightingDragon.jpeg" alt = "Depiction of Beowulf fighting his last fight versus the Dragon.">
-            <figcaption>https://medium.com/@ojarvis673/beowulf-and-the-dragon-2d0f86da8286</figcaption>
+            <figure>
+                <img src = "images/fightingDragon.jpeg" alt = "Depiction of Beowulf fighting his last fight versus the Dragon.">
+                <figcaption>https://medium.com/@ojarvis673/beowulf-and-the-dragon-2d0f86da8286</figcaption>
+            </figure>
         </div>
         <div class = "b3Text">
             <p>Seeking revenge for her son's death, Grendel's mother attacks Heorot. 
@@ -61,6 +73,102 @@
             </p>
         </div>
     </div>
+
+    <hr>
+
+    <div class = "table-container">
+        <h2>Summary of Key Characteristics of Beowulf's Battles</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Battle</th>
+                    <th>Opponent</th>
+                    <th>Location</th>
+                    <th>Outcome</th>
+                    <th>Notable Weapon/Item</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Beowulf vs. Grendel</td>
+                    <td>Grendel</td>
+                    <td>Heorot Hall</td>
+                    <td>Beowulf defeats Grendel by tearing off his arm, leading to Grendel's death.</td>
+                    <td>Bare Hands</td>
+                </tr>
+                <tr>
+                    <td>Beowulf vs. Grendel's Mother</td>
+                    <td>Grendel's Mother</td>
+                    <td>Underwater Lair</td>
+                    <td>Beowulf kills Grendel's Mother with a giant's sword found in her lair.</td>
+                    <td>Giant's Sword</td>
+                </tr>
+                <tr>
+                    <td>Beowulf vs. The Dragon</td>
+                    <td>The Dragon</td>
+                    <td>Geatland</td>
+                    <td>Beowulf and the dragon fatally wound each other; Beowulf posthumously wins.</td>
+                    <td>Sword (Naegling), but it breaks; Wiglaf's sword is effective</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <hr>
+
+
+    <div class = "quotes">
+        <label for="battleQuotes">Select a Battle for Quotes relating to that Battle:</label>
+        <select id="battleQuotes">
+            <option value="">--Select a Battle--</option>
+            <option value="grendel">Beowulf vs. Grendel</option>
+            <option value="grendelsMother">Beowulf vs. Grendel's Mother</option>
+            <option value="dragon">Beowulf vs. The Dragon</option>
+        </select>
+    </div>
+
+    <div id="quotesContainer"></div>
+
+    <script>
+        document.getElementById('battleQuotes').addEventListener('change', function() {
+            const selectedBattle = this.value;
+            const quotesContainer = document.getElementById('quotesContainer');
+    
+            const quotes = {
+                grendel: [
+                    "“Hand-to-hand is how it will be, a life-and-death fight with the fiend.”",
+                    "“Grendel was the name of this grim demon haunting the marches, marauding round the heath.”",
+                    "“So Grendel waged his lonely war, inflicting constant cruelties on the people.”"
+                ],
+                grendelsMother: [
+                    "“She took Hrothgar's closest friend, killing him and carrying off his body.”",
+                    "“Then Beowulf rose, still brave, still strong.”",
+                    "“The sword sang its fierce song, sang Beowulf's strength.”"
+                ],
+                dragon: [
+                    "“The dragon began to belch out flames and burn bright homesteads.”",
+                    "“Beowulf uttered his final boast: ‘I've never known fear; as a youth I fought in endless battles.’”",
+                    "“For 300 years, this dragon guarded the treasure.”"
+                ]
+            };
+
+            quotesContainer.innerHTML = ''; // Clear previous quotes
+            if(quotes[selectedBattle]) {
+                quotes[selectedBattle].forEach(quote => {
+                    const p = document.createElement('p');
+                    p.textContent = quote;
+                    quotesContainer.appendChild(p);
+                });
+            } else {
+                quotesContainer.innerHTML = '<p>Please select a battle to see quotes.</p>';
+            }
+        });
+
+    </script>
+
+
+
 
 </body>
 </html>
