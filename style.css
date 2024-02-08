@@ -37,6 +37,7 @@ body {
 
 .text{
     padding-top: 50px;
+    padding-bottom: 50px;
     font-size: large;
     display: block;
     max-width: 65vw;
@@ -44,7 +45,7 @@ body {
     margin: 0 auto;
     position: relative;
     text-align: left;
-    font-family: 'Poppins', sans-serif;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .text figcaption{
@@ -61,4 +62,126 @@ body {
     text-align: center;
     margin: auto;
     display: block;
+}
+
+.grendel{
+    text-align: center;
+    font-size: small;
+}
+
+.grendelsMother{
+    text-align: center;
+    font-size: small;
+}
+
+.theDragon{
+    text-align: center;
+    font-size: small;
+}
+
+.grendel img{
+    width: auto;
+    height: 30vw;
+    padding-right: 70px;
+    filter: saturate(0%) drop-shadow(0 0 0.55rem black);
+}
+
+.grendelsMother img{
+    width: auto;
+    height: 30vw;
+    padding-right: 70px;
+    filter: saturate(0%) drop-shadow(0 0 0.55rem black);
+}
+
+.theDragon img{
+    width: auto;
+    height: 30vw;
+    padding-right: 70px;
+    filter: saturate(0%) drop-shadow(0 0 0.55rem black);
+}
+
+.b1{
+    padding: 50px;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    max-width: 65vw;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.b2 {
+    padding: 50px;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    max-width: 65vw;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.b3 {
+    padding: 50px;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    max-width: 65vw;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.b1 figcaption{
+    text-align: left;
+    font-size: x-small;
+}
+
+.b2 figcaption{
+    text-align: left;
+    font-size: x-small;
+}
+
+.b3 figcaption{
+    text-align: left;
+    font-size: x-small;
+}
+
+.grendel h2{
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.grendelsMother h2{
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.theDragon h2{
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.b1 p{
+    font-size: large;
+    font-family:'Courier New', Courier, monospace;
+    width: 40vw;
+    height: auto;
+}
+
+.b2 p{
+    font-size: large;
+    font-family:'Courier New', Courier, monospace;
+    width: 40vw;
+    height: auto;
+}
+
+.b3 p{
+    font-size: large;
+    font-family:'Courier New', Courier, monospace;
+    width: 40vw;
+    height: auto;
 }
